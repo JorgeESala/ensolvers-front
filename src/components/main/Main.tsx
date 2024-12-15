@@ -26,6 +26,7 @@ function Main() {
     }
     useEffect(() => {
         setLoading(true);
+        console.log(loading);
         axios.get(SERVER)
         .then((res) => {
             setNotes(res.data);
