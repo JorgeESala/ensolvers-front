@@ -14,7 +14,7 @@ const FilterButtons: React.FC<FilterButtonsProps> = ({
   activeFilter
 }) => {
   return (
-    <ButtonGroup>
+    <ButtonGroup className='d-block'>
         <Button className={activeFilter==='all'? 'active' : ''} id='allButton' onClick={onFilterAll} variant='primary'>All</Button>
         <Button className={activeFilter==='active'? 'active' : ''} id='activeButton' onClick={onFilterActive} variant='primary'>Active</Button>
         <Button className={activeFilter==='archived'? 'active' : ''} id='archivedButton' onClick={onFilterArchived} variant='primary'>Archived</Button>
