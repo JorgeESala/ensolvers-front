@@ -4,6 +4,7 @@ import FilterButtons from '../filterButtons/FilterButtons'
 import NotesTable from '../notesTable/NotesTable'
 import Note from '../note/Note';
 import axios from 'axios';
+import Loading from '../loading/Loading';
 
 
 function Main() {
@@ -26,7 +27,6 @@ function Main() {
     }
     useEffect(() => {
         setLoading(true);
-        console.log(loading);
         axios.get(SERVER)
         .then((res) => {
             setNotes(res.data);
@@ -138,6 +138,9 @@ function Main() {
     
     />
     <h1 className='text-white text-center'>Notes</h1>
+    <Loading
+    loading={loading}
+    />
     <FilterButtons
     onFilterAll={() => applyFilter("all", notes)}
     onFilterActive={() => applyFilter("active", notes)}
