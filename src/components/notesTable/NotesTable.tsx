@@ -1,8 +1,5 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
 import { Button, Table } from 'react-bootstrap';
 import Note from '../note/Note';
-import FilterButtons from '../filterButtons/FilterButtons';
 
 interface NotesTableProps {
     handleDelete: (id:number) => void;
