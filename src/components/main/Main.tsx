@@ -72,7 +72,7 @@ function Main() {
     })
     const submitHandler = ((event: React.FormEvent) => {
       event.preventDefault();
-      axios.put<Note>("http://localhost:8080/api/notes",
+      axios.put<Note>(SERVER,
         {
           id:formData.id,
           name:formData.name,
@@ -100,10 +100,10 @@ function Main() {
     }
       const handleArchive = ((id: number, isArchived: boolean) => {
         if(isArchived){
-            axios.post("http://localhost:8080/api/notes/activate/" + id);
+            axios.post(SERVER + "/activate/" + id);
 
         } else {
-            axios.post("http://localhost:8080/api/notes/archive/" + id);
+            axios.post(SERVER + "/archive/" + id);
 
         }
         const updatedNotes = notes.map((note) => {
