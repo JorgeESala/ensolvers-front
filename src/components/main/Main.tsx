@@ -12,7 +12,7 @@ function Main() {
     const [loading, setLoading] = useState(true);
     const [filter, setFilter] = useState<"all" | "active" | "archived">("all");
     const [formVisibility, setFormVisibility] = useState(false);
-    const SERVER = "http://localhost:8080/api/notes"
+    const SERVER = "https://ensolvers-back.onrender.com/api/notes"
     const [formData, setFormData] = useState<FormData>( {
       id:null,
       name: "",
